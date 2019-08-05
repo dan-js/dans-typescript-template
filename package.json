@@ -1,0 +1,30 @@
+{
+  "name": "dans-typescript-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "./node_modules/.bin/tsc --rootDir src/ --outDir dist/",
+    "build:watch": "./node_modules/.bin/tsc --watch --rootDir src/ --outDir dist/",
+    "start": "node dist/index.js",
+    "start:watch": "nodemon dist/index.js",
+    "test": "./node_modules/.bin/jest",
+    "lint": "./node_modules/.bin/eslint src/**/*.ts",
+    "clean": "rm -rf dist/",
+    "precommit": "yarn lint && yarn test && yarn clean"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.16",
+    "@types/node": "^12.6.9",
+    "@typescript-eslint/parser": "^1.13.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-jest": "^22.14.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3"
+  }
+}
